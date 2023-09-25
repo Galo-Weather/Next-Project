@@ -112,11 +112,14 @@ const UnderlineLogin = styled.span`
     }
 `
 
-const LoginAnchor = styled.a`
-    text-decoration: none;
+const LoginAnchor = styled.li`
     list-style: none;
-    color: black;
-    font-size: 1.3rem;
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.3rem;
+    }
 `
 
 function Header() {
@@ -155,7 +158,7 @@ function Header() {
                 <LoginHeader>
                     <UnderlineLogin></UnderlineLogin>
                     <ul>
-                        <li><LoginAnchor>Login</LoginAnchor></li>
+                        <LoginAnchor><Link to="/Sign-in">Login</Link></LoginAnchor>
                     </ul>
                 </LoginHeader>
             </Head>
