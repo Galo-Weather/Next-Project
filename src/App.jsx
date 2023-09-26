@@ -1,7 +1,9 @@
 import Header from './components/Header';
+import Footer from './components/Footer';
 import MainPage from './components/MainPage';
 import Error from './components/Error';
 import Login from './components/Login';
+import Solucao from './components/Solucao';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Routes, Route } from 'react-router-dom';
 
@@ -10,11 +12,13 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path='*' element={<Error />}/>
-        
+        <Route path='*' element={<Error />} />
+
         <Route path='/' element={<MainPage />} />
+        <Route path='/Soluçao' element={<Solucao />} />
         <Route path='/Sign-in' element={<Login />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }
