@@ -5,7 +5,7 @@ import fiap from '../../imgs/FiapLogo.png'
 
 const FooterContainer = styled.div`
     position: absolute;
-    height: 15vh;
+    height: auto;
     width: 100%;
     margin: 0;
     background-color: #0c0c0c;
@@ -17,10 +17,10 @@ const FooterContent = styled.div`
     margin: 0;
     align-items: center;
     img:nth-child(1) {
-        width: 200px;
+        width: 10em;
     }
     img:nth-child(2) {
-        width: 200px;
+        width: 10em;
     } 
     @media (min-width: 1100px) {
         img:nth-child(1) {
