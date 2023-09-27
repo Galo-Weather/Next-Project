@@ -24,7 +24,6 @@ const Head = styled.header`
     @media (min-width: 1100px) {
           translate: 0 0;
           flex-direction: row;
-          align-items: center;
           justify-content: space-between;
           width: 100%;
           left: 0;
@@ -95,31 +94,23 @@ const LoginHeader = styled.div`
 
     @media (min-width: 1100px) {
         position: unset;
-        padding: 0;
-        text-align: center;
         margin-right: 1em;
+        ul{
+            padding: 0;
+            margin: 0;
+        }
     }
 
-`
-const UnderlineLogin = styled.span`
-    border: 1px solid #000;
-    
-    width: 100%;
-
-    @media (min-width: 1100px) {
-        visibility: hidden;
-        opacity: 0;
-    }
 `
 
 const LoginAnchor = styled.li`
-    list-style: none;
+list-style: none;
 
-    a{
-        text-decoration: none;
-        color: black;
-        font-size: 1.3rem;
-    }
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
 `
 
 function Header() {
@@ -156,7 +147,6 @@ function Header() {
                     </NavHeader>
                 </Nav>
                 <LoginHeader>
-                    <UnderlineLogin></UnderlineLogin>
                     <ul>
                         <LoginAnchor><Link to="/Sign-in">Login</Link></LoginAnchor>
                     </ul>
