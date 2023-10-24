@@ -157,14 +157,3 @@ function Header() {
 }
 
 export default Header
-
-{/* <li>
-                            <ScrollLink
-                            activeClass="active"
-                            to="AboutUs"
-                            spy={true}
-                            offset={-50}
-                            duration={500}>
-                            <a href="#equipe">Sobre Nós</a>
-                            </ScrollLink>
-                        </li> */}

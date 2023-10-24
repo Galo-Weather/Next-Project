@@ -2,7 +2,6 @@ import styled from "styled-components";
 import React from 'react';
 import Esp32 from '../../imgs/Esp32.png';
 import Ultrassonic from '../../imgs/Ultrassonic_sensor.png';
-import Circuit from '../../imgs/Circuit_Sketch.png';
 import logo from '../../imgs/galoBanner.png'
 
 const SolucaoContainer = styled.section`
@@ -333,7 +332,11 @@ function Solucao() {
                                             </select>
                                         </div>
                                         <div class="infoSim">
-                                            <img class="imgSim" id="imgSim2" src="./imgs/clima-imgs/cloud.png"></img>
+                                            <img 
+                                            class="imgSim" 
+                                            id="imgSim2" 
+                                            src="./imgs/clima-imgs/cloud.png"
+                                            alt="aaa"></img>
                                             <p id="capacidade">Capacidade de chuva: 5mm/h</p>
                                             <div class="chuvaP">
                                                 <p>Chuva:</p>
@@ -353,24 +356,3 @@ function Solucao() {
 }
 
 export default Solucao
-
-// <SolucaoImg>
-// <img src={Circuit} alt="Esp32 tinkercad"></img> </SolucaoImg>
-// const SolucaoImg = styled.figure`
-//  img{
-//     max-width: 100%;
-//     border-radius: 1em;
-//     box-shadow: 0 1em 1em rgba(214, 214, 214, 0.8);
-//     margin-bottom: 2em;
-//  }
-//  @media (min-width: 1100px) {
-//     padding: 1em;
-//     grid-column-start: 1;
-//     grid-column-end: 3;
-
-//     img{
-//         max-width: 50%;
-//         margin: 0;
-//     }
-// }
-// `
