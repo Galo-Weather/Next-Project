@@ -16,12 +16,26 @@ const HomeContainer = styled.div`
     text-align: center;
 
     @media (min-width: 1100px) {
-        margin-top: 2em;
+        margin-top: 6.5em;
         padding: 2em 0 em 0;
         min-height: 100vh;
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: 25% auto;
+    }
+`
+const HomeTxt1 = styled.div`
+    padding: 1em;
+    p {
+        font-size: 3em;
+        font-weight: bold;
+        margin: 0;
+        color: #0f62fe;
+      }
+    @media (min-width: 1100px) {
+        padding: 0;
+        grid-column-start: 1; 
+        grid-column-end: 3;
     }
 `
 const HomeImg = styled.figure`
@@ -35,26 +49,14 @@ const HomeImg = styled.figure`
         padding: 0 1em 0 0;
         text-align: start;
         grid-column: 2;
+        grid-row: 2;
 
         img{
             max-width: 100%;
         }
     }
 `
-const HomeTxt1 = styled.p`
-    padding: 1em;
-    p {
-        font-size: 3em;
-        font-weight: bold;
-        color: #0f62fe;
-      }
-    @media (min-width: 1100px) {
-        padding-top: 5em;
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-`
-const HomeTxt2 = styled.p`
+const HomeTxt2 = styled.div`
     padding: 1em;
 
     p:first-child {
@@ -70,7 +72,6 @@ const HomeTxt2 = styled.p`
       @media (min-width: 1100px) {
         display: flex;
         flex-direction: column;
-        max-width: 80%;
         padding: 2em;
         text-align: center;
         grid-column: 1;
