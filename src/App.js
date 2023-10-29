@@ -5,6 +5,7 @@ import MainPage from './components/MainPage';
 import Error from './components/Error';
 import Login from './components/Login';
 import Solucao from './components/Solucao';
+
 //Import react e css
 import 'bootstrap/dist/css/bootstrap.css';
 import { Routes, Route } from 'react-router-dom';
