@@ -135,7 +135,7 @@ function Login() {
           <LoginForm>
             <LoginAlert>Alerta!</LoginAlert>
             <LoginInputs>
-              <span>Email ou CNPJ</span>
+              <span>E-mail ou CNPJ</span>
               <input class="loginInput" type="text" name="email" id="loginBaseInput" placeholder="Nome@email.com"></input>
             </LoginInputs>
             <LoginInputs>

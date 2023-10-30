@@ -235,15 +235,13 @@ function Solucao() {
                                 <img
                                     src={Ultrassonic}
                                     alt="Esp32"></img>
-                                <h3>Hardware</h3>
+                                <h3>Parcerias</h3>
                             </Face1Content>
                         </Face1>
                         <Face2>
                             <Face2Content>
-                                <p>O Galo Weather utiliza um sensor
-                                    ultrassônico para detectar obstruções em bueiros
-                                    e um microcontrolador ESP32 para enviar dados para
-                                    processamento.
+                                <p>Prefeitura da cidade de São Paulo, Defesa Civil 
+                                   e Secretária de Urbanismo.
                                 </p>
                             </Face2Content>
                         </Face2>
