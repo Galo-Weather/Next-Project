@@ -3,6 +3,7 @@ import React from 'react';
 import Esp32 from '../../imgs/Esp32.png';
 import Ultrassonic from '../../imgs/Ultrassonic_sensor.png';
 import logo from '../../imgs/galoBanner.png'
+import Cloud from '../../imgs/icons/clear.png'
 
 const SolucaoContainer = styled.section`
     background: linear-gradient(#ffffff, #e8e8e8 15%);
@@ -129,14 +130,6 @@ p{
 `
 const ClimaContainer = styled.section`
 `
-const ClimaTitle = styled.section`
- h1{
-    font-size: 3em;
-    font-weight: bold;
-    color: #0f62fe;
-    text-align: center;
- }
-`
 const ClimaContent = styled.section`
     display: flex;
     justify-content: space-between;
@@ -169,6 +162,9 @@ const TempoSelect = styled.section`
         border-bottom: 1px solid #0f62fe;
         appearance: none;
     }
+`
+const TempoImg = styled.img`
+ max-width: 50%;
 `
 
 function Solucao() {
@@ -273,9 +269,6 @@ function Solucao() {
                 </SolucaoContent2>
             </SolucaoContainer>
             <ClimaContainer>
-                <ClimaTitle>
-                    <h1>Clima</h1>
-                </ClimaTitle>
                 <ClimaContent>
                     <Tempo>
                         <TempoTitle>
@@ -290,7 +283,10 @@ function Solucao() {
                                 <option value="op5">Belenzinho</option>
                             </select>
                         </TempoSelect>
-                        <img class="imgSim" id="imgSim1" src="./imgs/clima-imgs/cloud.png" alt="Clima-img"></img>
+                        <TempoImg 
+                        id="imgSim1" 
+                        src={Cloud}
+                        alt="Clima-img"></TempoImg>
                         <div class="temperatura">
                             <p class="temperatura-numero" id="temperatura-numero">20</p>
                             <p class="graus">°C</p>
@@ -313,42 +309,6 @@ function Solucao() {
                             </div>
                         </div>
                     </Tempo>
-                    <div class="programa">
-                        <div class="programa-txt">
-                            <div class="tempo-card-title">
-                                <p>Simulação</p>
-                            </div>
-                            <div class="content">
-                                <div class="simulacao">
-                                    <form class="formSim">
-                                        <div class="cidadeSim">
-                                            <i class="fa-solid fa-location-dot"></i>
-                                            <select id="cidades2" class="cidades" name="cidades2">
-                                                <option value="op1">Itaim Bibi</option>
-                                                <option value="op2">Mocca</option>
-                                                <option value="op3">Vila Prudente</option>
-                                                <option value="op4">Tatuapé</option>
-                                                <option value="op5">Belenzinho</option>
-                                            </select>
-                                        </div>
-                                        <div class="infoSim">
-                                            <img 
-                                            class="imgSim" 
-                                            id="imgSim2" 
-                                            src="./imgs/clima-imgs/cloud.png"
-                                            alt="aaa"></img>
-                                            <p id="capacidade">Capacidade de chuva: 5mm/h</p>
-                                            <div class="chuvaP">
-                                                <p>Chuva:</p>
-                                                <p id="chuvaP">222</p>
-                                            </div>
-                                            <p id="resultadoChuva">Não há risco de enchente, fique tranquilo</p>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </ClimaContent>
             </ClimaContainer>
         </>

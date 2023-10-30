@@ -78,6 +78,10 @@ const NavHeader = styled.ul`
         text-decoration: none;
         color: black;
     }
+    a:hover {
+        color: #0f62fe;
+        transition: 0.3s;
+    }
 
     @media (min-width: 1100px) {
         display: flex;
@@ -110,6 +114,10 @@ a{
     text-decoration: none;
     color: black;
     font-size: 1.3rem;
+}
+a:hover {
+    color: #0f62fe;
+    transition: 0.3s;
 }
 `
 
