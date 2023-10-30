@@ -7,7 +7,7 @@ const Teste2 = styled.h1`
 function Error() {
   return (
     <>
-      <Teste2>404</Teste2>
+      <Teste2>404 - Error</Teste2>
     </>
   )
 }
