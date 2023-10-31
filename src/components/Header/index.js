@@ -39,8 +39,8 @@ const Burguer = styled.div`
     width: 0;
     height: 0;
     z-index: 100;
-    top: 2%;
-    left: 5%;
+    top: 2.2%;
+    left: 1.5%;
     visibility: visible;
     opacity: 1;
     

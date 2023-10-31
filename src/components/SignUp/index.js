@@ -22,6 +22,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  margin-bottom: 2em;
 `
 const SignUpContainer = styled.div`
   position: relative;
@@ -97,7 +98,7 @@ const SignUpInputs = styled.label`
   }
 `
 const RedirectSignin = styled.div`
-  padding: 0 1em 1em 0;
+  padding: 0 0 1em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
