@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../../imgs/galoBanner.png"
 
-const LoginPage = styled.div`
+const SignUpPage = styled.div`
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
   min-height: 93vh;
@@ -23,7 +23,7 @@ const Container = styled.div`
   justify-items: center;
   align-items: center;
 `
-const LoginContainer = styled.div`
+const SignUpContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,6 @@ const LoginContainer = styled.div`
   background: #fbfbfb;
   border-radius: 12px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-  min-height: 60vh; 
   width: 40vh;
   z-index: 1;
   h1{
@@ -62,14 +61,14 @@ const LoginContainer = styled.div`
     box-shadow: 0px 1px 18px #afafaf;
   }
 `
-const LoginForm = styled.form`
+const SignUpForm = styled.form`
   align-items: left;
   display: flex;
   flex-direction: column;
   span{
   }
 `
-const LoginAlert = styled.div`
+const SignUpAlert = styled.div`
   display: flex;
   font-weight: bold;
   color: red;
@@ -77,9 +76,12 @@ const LoginAlert = styled.div`
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 `
-const LoginInputs = styled.label`
+const SignUpInputs = styled.label`
   display: flex;
   flex-direction: column;
+  span{
+    margin-top: 0.5em;
+  }
   input{
     background: #fbfbfb;
     padding-top: 10px;
@@ -94,7 +96,7 @@ const LoginInputs = styled.label`
 
   }
 `
-const RedirectSignup = styled.div`
+const RedirectSignin = styled.div`
   padding: 0 1em 1em 0;
   display: flex;
   flex-direction: column;
@@ -124,9 +126,9 @@ const RedirectHome = styled.div`
 `
 
 
-function Login() {
+function SignUp() {
   return (
-    <LoginPage>
+    <SignUpPage>
       <Container>
         <LogoIMG>
           <Link to="/"><img
@@ -134,32 +136,40 @@ function Login() {
             class="login-img"
             alt="Galo Weather Logo"></img></Link>
         </LogoIMG>
-        <LoginContainer>
-          <h1 class="loginTitle">Login</h1>
-          <LoginForm>
-            <LoginAlert>Alerta!</LoginAlert>
-            <LoginInputs>
+        <SignUpContainer>
+          <h1>Cadastro</h1>
+          <SignUpForm>
+            <SignUpAlert>Alerta!</SignUpAlert>
+            <SignUpInputs>
               <span>Email</span>
-              <input class="loginInput" type="text" name="email" id="loginBaseInput" placeholder="Nome@email.com"></input>
-            </LoginInputs>
-            <LoginInputs>
+              <input type="text" name="email" id="login-Input" placeholder="Nome@email.com"></input>
+            </SignUpInputs>
+            <SignUpInputs>
+              <span>Nome</span>
+              <input type="text" name="name" id="login-Name-Input" placeholder="Nome e ultimo sobrenome"></input>
+            </SignUpInputs>
+            <SignUpInputs>
               <span>Senha</span>
-              <input class="loginInput" type="password" name="password" id="pass-Login-Input" placeholder="password">
+              <input type="password" name="password" id="pass-SignUp-Input" placeholder="Senha">
               </input>
-            </LoginInputs>
+            </SignUpInputs>
+            <SignUpInputs>
+              <span>Confirmar Senha </span>
+              <input type="password" name="p    asswordConfirm" id="confirmPass-SignUp-Input" placeholder="Confirme senha"></input>
+            </SignUpInputs>
             <button>Entrar</button>
-          </LoginForm>
-          <RedirectSignup>
-            <p>Nao possui uma conta?</p>
-            <Link to="/Sign-up" id="redirectSignup">Cadastre-se</Link>
-          </RedirectSignup>
+          </SignUpForm>
+          <RedirectSignin>
+            <p>Ja possui uma conta?</p>
+            <Link to="/Sign-in">Faça login</Link>
+          </RedirectSignin>
           <RedirectHome>
             <Link to="/">Voltar a página inicial</Link>
           </RedirectHome>
-        </LoginContainer>
+        </SignUpContainer>
       </Container>
-    </LoginPage>
+    </SignUpPage>
   );
 }
 
-export default Login
+export default SignUp

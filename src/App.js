@@ -5,6 +5,7 @@ import MainPage from './components/MainPage';
 import Error from './components/Error';
 import Login from './components/Login';
 import Solucao from './components/Solucao';
+import SignUp from './components/SignUp';
 
 //Import react e css
 import 'bootstrap/dist/css/bootstrap.css';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/' element={<MainPage />} />
         <Route path='/Soluçao' element={<Solucao />} />
         <Route path='/Sign-in' element={<Login />} />
+        <Route path='/Sign-up' element={<SignUp />} />
       </Routes>
       <Footer/>
     </div>
