@@ -33,7 +33,7 @@ const SignUpContainer = styled.div`
   background: #fbfbfb;
   border-radius: 12px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-  width: 40vh;
+  width: 300px;
   z-index: 1;
   h1{
     padding: 0 0;
@@ -147,7 +147,7 @@ function SignUp() {
             </SignUpInputs>
             <SignUpInputs>
               <span>Nome</span>
-              <input type="text" name="name" id="login-Name-Input" placeholder="Nome e ultimo sobrenome"></input>
+              <input type="text" name="name" id="login-Name-Input" placeholder="Nome e sobrenome"></input>
             </SignUpInputs>
             <SignUpInputs>
               <span>Senha</span>

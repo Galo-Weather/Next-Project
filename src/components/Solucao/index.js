@@ -159,7 +159,8 @@ const TempoSelect = styled.section`
         font-size: 20px;
         outline: none;
         border: none;
-        border-bottom: 1px solid #0f62fe;
+        border: 1px solid #0f62fe;
+        
         appearance: none;
     }
 `
@@ -279,23 +280,21 @@ function Solucao() {
                         id="imgSim1" 
                         src={Cloud}
                         alt="Clima-img"></TempoImg>
-                        <div class="temperatura">
-                            <p class="temperatura-numero" id="temperatura-numero">20</p>
-                            <p class="graus">°C</p>
+                        <div>
+                            <p>20</p>
+                            <p>°C</p>
                         </div>
-                        <div class="descricao">
-                            <p id="tempoTemp">Nublado</p>
+                        <div>
+                            <p>Nublado</p>
                         </div>
-                        <div class="infos">
-                            <div class="umidade">
-                                <i class="fa-solid fa-water"></i>
-                                <div class="text">
+                        <div>
+                            <div>
+                                <div>
                                     <p>Umidade <br /> 74%</p>
                                 </div>
                             </div>
-                            <div class="velocidade">
-                                <i class="fa-solid fa-wind"></i>
-                                <div class="text">
+                            <div>
+                                <div>
                                     <p>Velocidade <br /> 88%</p>
                                 </div>
                             </div>

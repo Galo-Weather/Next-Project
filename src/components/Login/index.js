@@ -34,7 +34,7 @@ const LoginContainer = styled.div`
   border-radius: 12px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
   min-height: 60vh; 
-  width: 40vh;
+  width: 300px;
   z-index: 1;
   h1{
     padding: 0 0;
