@@ -235,15 +235,13 @@ function Solucao() {
                                 <img
                                     src={Ultrassonic}
                                     alt="Esp32"></img>
-                                <h3>Hardware</h3>
+                                <h3>Parcerias</h3>
                             </Face1Content>
                         </Face1>
                         <Face2>
                             <Face2Content>
-                                <p>O Galo Weather utiliza um sensor
-                                    ultrassônico para detectar obstruções em bueiros
-                                    e um microcontrolador ESP32 para enviar dados para
-                                    processamento.
+                                <p>Prefeitura da cidade de São Paulo, Defesa Civil 
+                                   e Secretária de Urbanismo.
                                 </p>
                             </Face2Content>
                         </Face2>
@@ -256,16 +254,10 @@ function Solucao() {
                         alt='logo'
                         className='logo-img'
                     ></img>
-                    <p>Apresentamos com entusiasmo o projeto "Galo Weather", uma solução inovadora para os desafios dos alagamentos urbanos.
-                        Inspirados pelo icônico galo, símbolo tradicionalmente associado à previsão do tempo, desenvolvemos um software poderoso
-                        e uma plataforma integrada que transformam nossa abordagem às alagamentos. Essa solução tecnológica combina dados
-                        meteorológicos em tempo real, análise avançada e modelos precisos, permitindo a antecipação e ações preventivas
-                        diante das enchentes.</p>
-                    <p>Além disso, avançamos no desenvolvimento de um protótipo de hardware usando ESP32 e sensor ultrassônico.
-                        Essa integração promissora amplia nossa capacidade de coleta e análise de dados, fortalecendo ainda mais nossa
-                        abordagem proativa para mitigar os riscos de alagamento e promover cidades mais seguras e resilientes. Este hardware
-                        inovador é um passo crucial para aprimorar a eficácia de nossas soluções, fornecendo informações valiosas em tempo
-                        real e contribuindo para a segurança de comunidades em áreas propensas a alagamentos.</p>
+                    <p>O "Galo Weather" é um projeto inovador para combater alagamentos urbanos, usando 
+                        dados meteorológicos em tempo real e tecnologia. Eles desenvolveram software e um 
+                        protótipo de hardware para antecipar enchentes e melhorar a segurança de áreas 
+                        propensas a alagamentos.</p>
                 </SolucaoContent2>
             </SolucaoContainer>
             <ClimaContainer>
