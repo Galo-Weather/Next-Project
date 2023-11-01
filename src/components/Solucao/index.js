@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import React from 'react';
 import Esp32 from '../../imgs/Esp32.png';
+import parcerias from '../../imgs/parcerias.png';
+import analise_de_dados from '../../imgs/analise_de_dados.png';
 import Ultrassonic from '../../imgs/Ultrassonic_sensor.png';
 import logo from '../../imgs/galoBanner.png'
 import Cloud from '../../imgs/icons/clear.png'
@@ -77,8 +79,10 @@ const Face1 = styled.div`
 `
 const Face1Content = styled.div`
  h3{
+    padding-top: 0.6em;
     margin-top: 0.5em;
     color: #0f62fe;
+    font-weight: bold;
  }
 
  @media (min-width: 1100px) {
@@ -117,6 +121,7 @@ p{
     font-size: 1.2em;
     line-height: 1.2;
     margin-top: 1em;
+    text-weight: bold;
 }
 
 @media (min-width: 1100px) {
@@ -188,8 +193,7 @@ function Solucao() {
                             <Face2Content>
                                 <p>O Galo Weather utiliza um sensor
                                     ultrassônico para detectar obstruções em bueiros
-                                    e um microcontrolador ESP32 para enviar dados para
-                                    processamento.
+                                    e gerar notificações na rede.
                                 </p>
                             </Face2Content>
                         </Face2>
@@ -205,9 +209,7 @@ function Solucao() {
                         </Face1>
                         <Face2>
                             <Face2Content>
-                                <p>O software processa dados históricos e em tempo real,
-                                    permitindo alertas precisos baseados em padrões de chuva,
-                                    melhorando a previsão de alagamentos.</p>
+                                <p>O software realiza processamento de dados e envio de informações internas e externas (para o usuário).</p>
                             </Face2Content>
                         </Face2>
                     </Card>
@@ -215,17 +217,14 @@ function Solucao() {
                         <Face1>
                             <Face1Content>
                                 <img
-                                    src={Ultrassonic}
+                                    src={analise_de_dados}
                                     alt="Esp32"></img>
-                                <h3>Hardware</h3>
+                                <h3>Analise de Dados</h3>
                             </Face1Content>
                         </Face1>
                         <Face2>
                             <Face2Content>
-                                <p>O Galo Weather utiliza um sensor
-                                    ultrassônico para detectar obstruções em bueiros
-                                    e um microcontrolador ESP32 para enviar dados para
-                                    processamento.
+                                <p>O Galo Weather realiza uma análise de dados meteorológicos e estatísticos para gerar suas previsões.
                                 </p>
                             </Face2Content>
                         </Face2>
@@ -234,8 +233,8 @@ function Solucao() {
                         <Face1>
                             <Face1Content>
                                 <img
-                                    src={Ultrassonic}
-                                    alt="Esp32"></img>
+                                    src={parcerias}
+                                    alt="Parcerias"></img>
                                 <h3>Parcerias</h3>
                             </Face1Content>
                         </Face1>
@@ -255,10 +254,9 @@ function Solucao() {
                         alt='logo'
                         className='logo-img'
                     ></img>
-                    <p>O "Galo Weather" é um projeto inovador para combater alagamentos urbanos, usando 
-                        dados meteorológicos em tempo real e tecnologia. Eles desenvolveram software e um 
-                        protótipo de hardware para antecipar enchentes e melhorar a segurança de áreas 
-                        propensas a alagamentos.</p>
+                    <p>O "Galo Weather" é um projeto inovador para combater alagamentos urbanos usando tecnlogia.
+                        Nele, a união de um software de análise e manipulação de dados e um hardware de monitoramento
+                        permitem antecipar enchentes e melhorar a segurança de áreas propensas a alagamentos.</p>
                 </SolucaoContent2>
             </SolucaoContainer>
             <ClimaContainer>
