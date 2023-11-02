@@ -6,6 +6,8 @@ import analise_de_dados from '../../imgs/analise_de_dados.png';
 import Ultrassonic from '../../imgs/Ultrassonic_sensor.png';
 import logo from '../../imgs/galoBanner.png'
 import Cloud from '../../imgs/icons/clear.png'
+import Umidade from '../../imgs/icons/humidade.png'
+import Velocidade from '../../imgs/icons/vento.png'
 
 const SolucaoContainer = styled.section`
     background: linear-gradient(#ffffff, #e8e8e8 15%);
@@ -133,44 +135,85 @@ p{
     grid-column-end: 3;
 }
 `
-const ClimaContainer = styled.section`
-`
 const ClimaContent = styled.section`
-    display: flex;
-    justify-content: space-between;
-    padding: 2em 7em;
 `
-const Tempo = styled.section`
-    height: 40em;
+const ClimaContainer = styled.div`
+    padding: 1em;
+`
+const Tempo = styled.div`
+    
     padding: 2em;
-    width: 35%;
     box-shadow: 0 1px 20px rgba(214, 214, 214, 0.8);
     border-radius: 2em;
+    text-align: center;
 `
 const TempoTitle = styled.section`
 h1{
     font-size: 2.5em;
     font-weight: bold;
     color: #0f62fe;
-    text-align: center;
  }
 `
 const TempoSelect = styled.section`
-    display: flex;
     padding-top: 0.5em;
-    padding-left: 1em;
     select{
+        display: flex;
+        width: 100%;
+        text-align: center;
         padding-left: 10px;
         font-size: 20px;
         outline: none;
         border: none;
-        border: 1px solid #0f62fe;
-        
         appearance: none;
+        border: 1px solid #0f62fe;
+        border-radius: 2em;
     }
 `
 const TempoImg = styled.img`
- max-width: 50%;
+ max-width: 80%;
+`
+const TempoInfo = styled.div`
+ display: flex;
+ flex-direction: column;
+`
+const TempTxt = styled.div`
+padding: 1em;
+ p{
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+ }
+`
+const TempInfo = styled.div`
+padding-top: 1em;
+display: flex;
+ div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0;
+ }
+ div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 0;
+ }
+ p{
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+ }
+ img{
+    max-width: 30%;
+ }
+`
+const Resultado = styled.div`
+    margin-top: 2em;
+    padding: 2em;
+    box-shadow: 0 1px 20px rgba(214, 214, 214, 0.8);
+    border-radius: 2em;
+    text-align: center;
 `
 
 function Solucao() {
@@ -240,8 +283,8 @@ function Solucao() {
                         </Face1>
                         <Face2>
                             <Face2Content>
-                                <p>Prefeitura da cidade de São Paulo, Defesa Civil 
-                                   e Secretária de Urbanismo.
+                                <p>Prefeitura da cidade de São Paulo, Defesa Civil
+                                    e Secretária de Urbanismo.
                                 </p>
                             </Face2Content>
                         </Face2>
@@ -263,7 +306,7 @@ function Solucao() {
                 <ClimaContent>
                     <Tempo>
                         <TempoTitle>
-                            <h2>Tempo</h2>
+                            <h2>Escolha sua região</h2>
                         </TempoTitle>
                         <TempoSelect>
                             <select id="cidades1" class="cidades" name="cidades1">
@@ -274,30 +317,60 @@ function Solucao() {
                                 <option value="op5">Belenzinho</option>
                             </select>
                         </TempoSelect>
-                        <TempoImg 
-                        id="imgSim1" 
-                        src={Cloud}
-                        alt="Clima-img"></TempoImg>
-                        <div>
-                            <p>20</p>
-                            <p>°C</p>
-                        </div>
-                        <div>
-                            <p>Nublado</p>
-                        </div>
-                        <div>
-                            <div>
+                        <TempoImg
+                            id="imgSim1"
+                            src={Cloud}
+                            alt="Clima-img"></TempoImg>
+                        <TempoInfo>
+                            <TempTxt>
+                                <p>20 °C</p>
+                                <p>Nublado</p>
+                            </TempTxt>
+                            <TempInfo>
                                 <div>
+                                    <img
+                                        src={Umidade}
+                                        alt="Umidade imagem"></img>
                                     <p>Umidade <br /> 74%</p>
                                 </div>
-                            </div>
-                            <div>
                                 <div>
+                                    <img
+                                        src={Velocidade}
+                                        alt="Velocidade imagem"></img>
                                     <p>Velocidade <br /> 88%</p>
                                 </div>
-                            </div>
-                        </div>
+                            </TempInfo>
+                        </TempoInfo>
                     </Tempo>
+                    <Resultado>
+                        <TempoTitle>
+                            <h2>Resultado</h2>
+                        </TempoTitle>
+                        <TempoImg
+                            id="imgSim1"
+                            src={Cloud}
+                            alt="Clima-img"></TempoImg>
+                        <TempoInfo>
+                            <TempTxt>
+                                <p>20 °C</p>
+                                <p>Nublado</p>
+                            </TempTxt>
+                            <TempInfo>
+                                <div>
+                                    <img
+                                        src={Umidade}
+                                        alt="Umidade imagem"></img>
+                                    <p>Umidade <br /> 74%</p>
+                                </div>
+                                <div>
+                                    <img
+                                        src={Velocidade}
+                                        alt="Velocidade imagem"></img>
+                                    <p>Velocidade <br /> 88%</p>
+                                </div>
+                            </TempInfo>
+                        </TempoInfo>
+                    </Resultado>
                 </ClimaContent>
             </ClimaContainer>
         </>
