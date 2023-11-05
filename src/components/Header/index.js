@@ -151,7 +151,7 @@ function Header() {
                         <li><Link to="/">Causas</Link></li>
                         <li><Link to="/Soluçao">Solução</Link></li>
                         <li><Link to="/Soluçao">Sobre Nós</Link></li>
-                        <li><Link to="/Soluçao">Contato</Link></li>
+                        <li><Link to="/Contato">Contato</Link></li>
                     </NavHeader>
                 </Nav>
                 <LoginHeader>
