@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from 'react';
 import mainGif from '../../imgs/capaGif.gif';
 import problemaImagem from '../../imgs/problemaImagem.jpg';
-
+import Ultrassonic from '../../imgs/Ultrassonic_sensor.png';
 
 const Home = styled.section`
 `
@@ -145,13 +145,80 @@ const CausaContainer = styled.section`
     }
 `
 const CausaContent = styled.div`
-
 @media (min-width: 1100px) {
-    display: flex;
-    padding: 1em;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding: 1em;   
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
 }
 `
+const Card = styled.div`
+    position: relative;
+    background: #f4f4f4;
+    text-align: center;
+    align-items: center;
+    border-radius: 1em;
+    margin-bottom: 1em;
 
+    img{
+        max-width: 20%;
+        margin: auto;
+    }
+
+    @media (min-width: 1100px) {
+        background: transparent;
+        box-shadow: none;
+        padding: 1em;
+        height: 100%;
+        margin: 0;
+    }
+`
+const Face1 = styled.div`
+    padding: 1em;
+    background: #f4f4f4;
+    border-radius: 1em 1em 0 0;
+    box-shadow: 0 1em 1em rgba(214, 214, 214, 0.8);
+
+    @media (min-width: 1100px) {
+    }
+
+`
+const Face1Content = styled.div`
+ h3{
+    padding-top: 0.6em;
+    margin-top: 0.5em;
+    color: #0f62fe;
+    font-weight: bold;
+ }
+
+ @media (min-width: 1100px) {
+    h3{
+        margin-top: 0;
+     }
+}
+`
+const Face2 = styled.div`
+    padding: 1em;
+    background: #fff;
+    border-radius: 0 0 1em 1em;
+    
+    box-shadow: 0 1em 1em rgba(214, 214, 214, 0.8);
+    
+    @media (min-width: 1100px) {
+    }
+`
+const Face2Content = styled.div`
+ padding: 1em;
+
+ @media (min-width: 1100px) {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: center;
+}
+`
 function MainPage() {
     return (
         <>
@@ -201,6 +268,114 @@ function MainPage() {
                 <CausaContainer>
                     <h1>Principais causas</h1>
                     <CausaContent>
+                        <Card>
+                            <Face1>
+                                <Face1Content>
+                                    <img
+                                        src={Ultrassonic}
+                                        alt="Esp32"></img>
+                                    <h3>Hardware</h3>
+                                </Face1Content>
+                            </Face1>
+                            <Face2>
+                                <Face2Content>
+                                    <p>O Galo Weather utiliza um sensor
+                                        ultrassônico para detectar obstruções em bueiros
+                                        e gerar notificações na rede.
+                                    </p>
+                                </Face2Content>
+                            </Face2>
+                        </Card>
+                        <Card>
+                            <Face1>
+                                <Face1Content>
+                                    <img
+                                        src={Ultrassonic}
+                                        alt="Esp32"></img>
+                                    <h3>Hardware</h3>
+                                </Face1Content>
+                            </Face1>
+                            <Face2>
+                                <Face2Content>
+                                    <p>O Galo Weather utiliza um sensor
+                                        ultrassônico para detectar obstruções em bueiros
+                                        e gerar notificações na rede.
+                                    </p>
+                                </Face2Content>
+                            </Face2>
+                        </Card>
+                        <Card>
+                            <Face1>
+                                <Face1Content>
+                                    <img
+                                        src={Ultrassonic}
+                                        alt="Esp32"></img>
+                                    <h3>Hardware</h3>
+                                </Face1Content>
+                            </Face1>
+                            <Face2>
+                                <Face2Content>
+                                    <p>O Galo Weather utiliza um sensor
+                                        ultrassônico para detectar obstruções em bueiros
+                                        e gerar notificações na rede.
+                                    </p>
+                                </Face2Content>
+                            </Face2>
+                        </Card>
+                        <Card>
+                            <Face1>
+                                <Face1Content>
+                                    <img
+                                        src={Ultrassonic}
+                                        alt="Esp32"></img>
+                                    <h3>Hardware</h3>
+                                </Face1Content>
+                            </Face1>
+                            <Face2>
+                                <Face2Content>
+                                    <p>O Galo Weather utiliza um sensor
+                                        ultrassônico para detectar obstruções em bueiros
+                                        e gerar notificações na rede.
+                                    </p>
+                                </Face2Content>
+                            </Face2>
+                        </Card>
+                        <Card>
+                            <Face1>
+                                <Face1Content>
+                                    <img
+                                        src={Ultrassonic}
+                                        alt="Esp32"></img>
+                                    <h3>Hardware</h3>
+                                </Face1Content>
+                            </Face1>
+                            <Face2>
+                                <Face2Content>
+                                    <p>O Galo Weather utiliza um sensor
+                                        ultrassônico para detectar obstruções em bueiros
+                                        e gerar notificações na rede.
+                                    </p>
+                                </Face2Content>
+                            </Face2>
+                        </Card>
+                        <Card>
+                            <Face1>
+                                <Face1Content>
+                                    <img
+                                        src={Ultrassonic}
+                                        alt="Esp32"></img>
+                                    <h3>Hardware</h3>
+                                </Face1Content>
+                            </Face1>
+                            <Face2>
+                                <Face2Content>
+                                    <p>O Galo Weather utiliza um sensor
+                                        ultrassônico para detectar obstruções em bueiros
+                                        e gerar notificações na rede.
+                                    </p>
+                                </Face2Content>
+                            </Face2>
+                        </Card>
                     </CausaContent>
                 </CausaContainer>
             </>
