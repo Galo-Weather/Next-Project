@@ -9,8 +9,6 @@ import Cloud from '../../imgs/icons/clear.png'
 import Umidade from '../../imgs/icons/humidade.png'
 import Velocidade from '../../imgs/icons/vento.png'
 import FloodHouse from '../../imgs/icons/casa-inundada.png'
-import WppIcon from "../../imgs/icons/whatsapp-icon.png";
-import EmailIcon from "../../imgs/icons/email-icon.png";
 
 const SolucaoContainer = styled.section`
     background: linear-gradient(#ffffff, #e8e8e8 15%);
