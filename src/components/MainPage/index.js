@@ -2,8 +2,7 @@ import styled from "styled-components";
 import React from 'react';
 import mainGif from '../../imgs/capaGif.gif';
 import problemaImagem from '../../imgs/problemaImagem.jpg';
-import Ultrassonic from '../../imgs/Ultrassonic_sensor.png';
-import Urbanização from '../../imgs/urbanizacao.png';
+import Urbanização from '../../imgs/Urbanizacao.png';
 import Drenagem from '../../imgs/drenagem.jpg';
 import Chuva from '../../imgs/chuva.png';
 
