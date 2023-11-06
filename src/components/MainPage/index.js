@@ -3,6 +3,9 @@ import React from 'react';
 import mainGif from '../../imgs/capaGif.gif';
 import problemaImagem from '../../imgs/problemaImagem.jpg';
 import Ultrassonic from '../../imgs/Ultrassonic_sensor.png';
+import Urbanização from '../../imgs/urbanizacao.png';
+import Drenagem from '../../imgs/drenagem.jpg';
+import Chuva from '../../imgs/chuva.png';
 
 const Home = styled.section`
 `
@@ -111,14 +114,14 @@ const ProblemaTxT = styled.div`
 
     p:first-child {
         margin-bottom: 0.5em;
-        font-size: 2em;
+        font-size: 2.5em;
         font-weight: bold;
         color: #0f62fe;
       }
 
       p {
         margin-bottom: 0.5em;
-        font-size: 1.2em;
+        font-size: 1.5em;
         line-height: 1.5;
       }
 
@@ -236,7 +239,10 @@ function MainPage() {
                         </HomeImg>
                         <HomeTxt2>
                             <p>O Desafio da IBM:</p>
-                            <p>A IBM está dedicada a enfrentar o desafio de tornar as cidades mais sustentáveis, buscando soluções inovadoras que equilibrem o desenvolvimento econômico, social e ambiental. Em nosso projeto, focamos em São Paulo, uma cidade que enfrenta o grave problema dos alagamentos urbanos. Nosso compromisso é contribuir com soluções eficazes para mitigar esses impactos, visando um ambiente mais seguro e habitável para as futuras gerações, alinhados com os Objetivos de Desenvolvimento Sustentável da ONU.</p>
+                            <p>A IBM está dedicada a tornar as cidades mais sustentáveis, buscando soluções inovadoras que equilibrem o 
+                                desenvolvimento econômico, social e ambiental dos ambientes urbanos. Em nosso projeto, buscamos enfrentar o 
+                                grave problema dos alagamentos urbanos. Nosso compromisso é contribuir com soluções eficazes para mitigar esses impactos, 
+                                visando um ambiente mais seguro e habitável para todos, alinhado com os Objetivos de Desenvolvimento Sustentável da ONU.</p>
                         </HomeTxt2>
                     </HomeContainer>
                 </Home>
@@ -272,21 +278,57 @@ function MainPage() {
                             <Face1>
                                 <Face1Content>
                                     <img
-                                        src={Ultrassonic}
-                                        alt="Esp32"></img>
-                                    <h3>Hardware</h3>
+                                        src={Chuva}
+                                        alt="Chuvas_intensas"></img>
+                                    <h3>Chuvas Intensas</h3>
                                 </Face1Content>
                             </Face1>
                             <Face2>
                                 <Face2Content>
-                                    <p>O Galo Weather utiliza um sensor
-                                        ultrassônico para detectar obstruções em bueiros
-                                        e gerar notificações na rede.
+                                    <p>O clima tropical em que está situada São Paulo sofre com frequência de chuvas intensas,
+                                    que podem resultar em deslizamentos e inundações, principalmente em regiões com drenagem
+                                    inadequada.
                                     </p>
                                 </Face2Content>
                             </Face2>
                         </Card>
                         <Card>
+                            <Face1>
+                                <Face1Content>
+                                    <img
+                                        src={Drenagem}
+                                        alt="Deficiencia_drenagem"></img>
+                                    <h3>Deficiência de Drenagem</h3>
+                                </Face1Content>
+                            </Face1>
+                            <Face2>
+                                <Face2Content>
+                                    <p>Sistemas de drenagem insuficientes em São Paulo também podem causar inundações, pois a
+                                    água da chuva pode se acumular em regiões baixas e ruas sem saídas ou canais adequados
+                                    para direcionar a água adequadamente.
+                                    </p>
+                                </Face2Content>
+                            </Face2>
+                        </Card>
+                        <Card>
+                            <Face1>
+                                <Face1Content>
+                                    <img
+                                        src={Urbanização}
+                                        alt="Urbanizacao"></img>
+                                    <h3>Urbanização</h3>
+                                </Face1Content>
+                            </Face1>
+                            <Face2>
+                                <Face2Content>
+                                    <p>Prédios, estradas e outras infraestruturas foram construídas sobre solo natural nos
+                                    distritos metropolitanos como resultado da rápida urbanização das cidades,
+                                    que diminuiu a capacidade do solo de absorver água e aumentou o escoamento.
+                                    </p>
+                                </Face2Content>
+                            </Face2>
+                        </Card>
+                        {/* <Card>
                             <Face1>
                                 <Face1Content>
                                     <img
@@ -339,43 +381,7 @@ function MainPage() {
                                     </p>
                                 </Face2Content>
                             </Face2>
-                        </Card>
-                        <Card>
-                            <Face1>
-                                <Face1Content>
-                                    <img
-                                        src={Ultrassonic}
-                                        alt="Esp32"></img>
-                                    <h3>Hardware</h3>
-                                </Face1Content>
-                            </Face1>
-                            <Face2>
-                                <Face2Content>
-                                    <p>O Galo Weather utiliza um sensor
-                                        ultrassônico para detectar obstruções em bueiros
-                                        e gerar notificações na rede.
-                                    </p>
-                                </Face2Content>
-                            </Face2>
-                        </Card>
-                        <Card>
-                            <Face1>
-                                <Face1Content>
-                                    <img
-                                        src={Ultrassonic}
-                                        alt="Esp32"></img>
-                                    <h3>Hardware</h3>
-                                </Face1Content>
-                            </Face1>
-                            <Face2>
-                                <Face2Content>
-                                    <p>O Galo Weather utiliza um sensor
-                                        ultrassônico para detectar obstruções em bueiros
-                                        e gerar notificações na rede.
-                                    </p>
-                                </Face2Content>
-                            </Face2>
-                        </Card>
+                        </Card> */}
                     </CausaContent>
                 </CausaContainer>
             </>

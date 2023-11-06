@@ -5,7 +5,7 @@ import parcerias from '../../imgs/parcerias.png';
 import analise_de_dados from '../../imgs/analise_de_dados.png';
 import Ultrassonic from '../../imgs/Ultrassonic_sensor.png';
 import logo from '../../imgs/galoBanner.png'
-import Cloud from '../../imgs/icons/clear.png'
+import Rain from '../../imgs/icons/rain.png'
 import Umidade from '../../imgs/icons/humidade.png'
 import Velocidade from '../../imgs/icons/vento.png'
 import FloodHouse from '../../imgs/icons/casa-inundada.png'
@@ -98,6 +98,8 @@ const Face2 = styled.div`
     padding: 1em;
     background: #fff;
     border-radius: 0 0 1em 1em;
+    font-size: 1.2em;
+    font-weight: bold;
     
     box-shadow: 0 1em 1em rgba(214, 214, 214, 0.8);
     
@@ -121,7 +123,7 @@ img{
     max-width: 70%;
 }
 p{
-    font-size: 1.2em;
+    font-size: 1.6em;
     line-height: 1.2;
     margin-top: 1em;
 }
@@ -270,8 +272,8 @@ function Solucao() {
                         </Face1>
                         <Face2>
                             <Face2Content>
-                                <p>O Galo Weather utiliza um sensor
-                                    ultrassônico para detectar obstruções em bueiros
+                                <p>O Galo Weather utiliza sensores
+                                    físicos para detectar obstruções em bueiros
                                     e gerar notificações na rede.
                                 </p>
                             </Face2Content>
@@ -303,7 +305,7 @@ function Solucao() {
                         </Face1>
                         <Face2>
                             <Face2Content>
-                                <p>O Galo Weather realiza uma análise de dados meteorológicos e estatísticos para gerar suas previsões.
+                                <p>O Galo Weather realiza uma análise de dados meteorológicos e estatísticos em suas previsões.
                                 </p>
                             </Face2Content>
                         </Face2>
@@ -355,12 +357,12 @@ function Solucao() {
                         </TempoSelect>
                         <TempoImg
                             id="imgSim1"
-                            src={Cloud}
+                            src={Rain}
                             alt="Clima-img"></TempoImg>
                         <TempoInfo>
                             <TempTxt>
                                 <p>20 °C</p>
-                                <p>Nublado</p>
+                                <p>Chuvoso</p>
                             </TempTxt>
                             <TempInfo>
                                 <div>
