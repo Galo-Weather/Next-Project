@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../../imgs/galoBanner.png"
+import signUp from "./script"
 
 const SignUpPage = styled.div`
   font-family: "Montserrat", sans-serif;
@@ -33,7 +34,7 @@ const SignUpContainer = styled.div`
   background: #fbfbfb;
   border-radius: 12px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
-  width: 300px;
+  width: 20em;
   z-index: 1;
   h1{
     padding: 0 0;
@@ -139,8 +140,8 @@ function SignUp() {
         </LogoIMG>
         <SignUpContainer>
           <h1>Cadastro</h1>
-          <SignUpForm>
-            <SignUpAlert>Alerta!</SignUpAlert>
+          <SignUpForm onSubmit={signUp}>
+            <SignUpAlert id="signUpAlert">Alerta!</SignUpAlert>
             <SignUpInputs>
               <span>Email</span>
               <input type="text" name="email" id="login-Input" placeholder="Nome@email.com"></input>
@@ -156,7 +157,7 @@ function SignUp() {
             </SignUpInputs>
             <SignUpInputs>
               <span>Confirmar Senha </span>
-              <input type="password" name="p    asswordConfirm" id="confirmPass-SignUp-Input" placeholder="Confirme senha"></input>
+              <input type="password" name="passwordConfirm" id="confirmPass-SignUp-Input" placeholder="Confirme senha"></input>
             </SignUpInputs>
             <button>Entrar</button>
           </SignUpForm>
