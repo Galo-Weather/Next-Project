@@ -13,7 +13,7 @@
 **Ano:** 2023
 ___
 <p align="center">
-<img src="./src/imgs/Logo%20vinicola%20galo.png" align=center width="300px" height="auto">
+<img src="./src/imgs/Galo_Weather.png" align=center>
 </p>
 
 ## Descrição do Projeto
