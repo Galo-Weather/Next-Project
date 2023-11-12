@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../../imgs/galoBanner.png"
+import Auth from "./script"
 
 const LoginPage = styled.div`
   font-family: "Montserrat", sans-serif;
@@ -34,7 +35,7 @@ const LoginContainer = styled.div`
   border-radius: 12px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
   min-height: 60vh; 
-  width: 300px;
+  width: 20em;
   z-index: 1;
   h1{
     padding: 0 0;
@@ -126,6 +127,12 @@ const RedirectHome = styled.div`
 
 
 function Login() {
+  //Verifica se o usuario esta logado
+  const userLog = localStorage.getItem("userLog");
+  if (userLog === "1") {
+    window.location.href = "/";
+  }
+  
   return (
     <LoginPage>
       <Container>
@@ -137,8 +144,8 @@ function Login() {
         </LogoIMG>
         <LoginContainer>
           <h1 class="loginTitle">Login</h1>
-          <LoginForm>
-            <LoginAlert>Alerta!</LoginAlert>
+          <LoginForm onSubmit={Auth}>
+            <LoginAlert id="loginAlert">Alerta!</LoginAlert>
             <LoginInputs>
               <span>Email</span>
               <input class="loginInput" type="text" name="email" id="loginBaseInput" placeholder="Nome@email.com"></input>
