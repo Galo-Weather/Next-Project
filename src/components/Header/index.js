@@ -172,7 +172,7 @@ function Header() {
                         <li onClick={() => handleNavLinkClick("Home")}><RouterLink to="/">Home</RouterLink></li>
                         <li onClick={() => handleNavLinkClick("Problema")}><RouterLink to="/">Problema</RouterLink></li>
                         <li onClick={() => handleNavLinkClick("Causa")}><RouterLink to="/">Causas</RouterLink></li>
-                        <li><RouterLink to="/Soluçao">Solução</RouterLink></li>
+                        <li onClick={() => handleNavLinkClick("Solucao")}><RouterLink to="/">Solução</RouterLink></li>
                         <li><RouterLink to="/Soluçao">Sobre Nós</RouterLink></li>
                         <li><RouterLink to="/Contato">Contato</RouterLink></li>
                     </NavHeader>
