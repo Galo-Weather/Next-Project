@@ -184,7 +184,6 @@ function Header() {
                     <LogoSideBarimg
                         src={logo}
                         alt='logo'
-                        className='logo-img'
                     ></LogoSideBarimg>
                 </LogoHeader>
                 <Nav>

@@ -553,7 +553,6 @@ function MainPage() {
                         <img
                             src={logo}
                             alt='logo'
-                            className='logo-img'
                         ></img>
                         <p>O "Galo Weather" é um projeto inovador para combater alagamentos urbanos usando tecnlogia.
                             Nele, a união de um software de análise e manipulação de dados e um hardware de monitoramento

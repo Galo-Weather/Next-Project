@@ -255,7 +255,7 @@ button:hover {
 `
 
 function Contato() {
-    
+
     const handleEmailClick = () => {
         window.location.href = 'mailto:ContatoGaloFiap@gmail.com';
     };
@@ -356,9 +356,6 @@ function Contato() {
             <>
                 <ContatoContainer>
                     <InnerContatoContainer>
-                        <img
-                            src=""
-                            alt="" ></img>
                         <ContatoContainerHeader>
                             <p>Entre em contato</p>
                             <p>Nós adoraríamos ouvir você. Aqui como você pode chegar até nós</p>
@@ -375,8 +372,7 @@ function Contato() {
                                     <p>Contato via WhatsApp</p>
                                     <p>Em caso de dúvidas, entre em contato!</p>
                                     <p>Nosso atendimento é das 08:00 as 18:00, com respostas em até 24 horas durante dias úteis</p>
-                                    <button class="button-card" onClick={sendWppClick}>Clique
-                                        aqui</button>
+                                    <button onClick={sendWppClick}>Clique aqui</button>
                                 </CardTextContainer>
                             </SobreCardContainer>
                             <SobreCardContainer>
@@ -390,7 +386,7 @@ function Contato() {
                                     <p>Contato via Email</p>
                                     <p>Em caso de dúvidas, entre em contato!</p>
                                     <p>Seu email será respondidoem até 24 horas durante dias úteis</p>
-                                    <button className="button-card" onClick={handleEmailClick}>Clique aqui</button>
+                                    <button onClick={handleEmailClick}>Clique aqui</button>
                                 </CardTextContainer>
                             </SobreCardContainer>
                         </CardsContainer>

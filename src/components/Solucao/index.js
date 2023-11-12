@@ -10,7 +10,7 @@ import Sun from '../../imgs/icons/clear.png'
 import Cloud from '../../imgs/icons/cloud.png'
 import Mist from '../../imgs/icons/mist.png'
 import Snow from '../../imgs/icons/snow.png'
-//Immagens resultado
+//Imagens resultado
 import FloodHouse from '../../imgs/icons/casa-inundada.png'
 
 const ClimaPage = styled.div`
@@ -211,7 +211,6 @@ function Solucao() {
                         </TempoTitle>
                         <TempoSelect>
                             <select id="cidades1"
-                                class="cidades"
                                 name="cidades1"
                                 value={opcaoSelecionada}
                                 onChange={handleSelectChange}>

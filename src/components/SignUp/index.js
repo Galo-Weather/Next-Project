@@ -141,7 +141,6 @@ function SignUp() {
         <LogoIMG>
           <Link to="/"><img
             src={Logo}
-            class="login-img"
             alt="Galo Weather Logo"></img></Link>
         </LogoIMG>
         <SignUpContainer>

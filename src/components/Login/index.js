@@ -139,20 +139,19 @@ function Login() {
         <LogoIMG>
           <Link to="/"><img
             src={Logo}
-            class="login-img"
             alt="Galo Weather Logo"></img></Link>
         </LogoIMG>
         <LoginContainer>
-          <h1 class="loginTitle">Login</h1>
+          <h1>Login</h1>
           <LoginForm onSubmit={Auth}>
             <LoginAlert id="loginAlert">Alerta!</LoginAlert>
             <LoginInputs>
               <span>Email</span>
-              <input class="loginInput" type="text" name="email" id="loginBaseInput" placeholder="Nome@email.com"></input>
+              <input type="text" name="email" id="loginBaseInput" placeholder="Nome@email.com"></input>
             </LoginInputs>
             <LoginInputs>
               <span>Senha</span>
-              <input class="loginInput" type="password" name="password" id="pass-Login-Input" placeholder="password">
+              <input type="password" name="password" id="pass-Login-Input" placeholder="password">
               </input>
             </LoginInputs>
             <button>Entrar</button>
