@@ -82,8 +82,13 @@ $primary-gradient-end: #ffffff;
   div:nth-child(2) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 0;
+  }
+  div:nth-child(1) {
+    justify-content: start;
+  }
+  div:nth-child(2) {
+    justify-content: end;
   }
 
   p {
