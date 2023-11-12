@@ -241,6 +241,8 @@ function Test() {
                                     <p>Velocidade <br /> {informacoesCidades[opcaoSelecionada].velocidade}</p>
                                 </div>
                             </TempInfo>
+                            <p></p>
+                            <p>*Interface apenas para fins ilustrativos, não refletindo resultados reais.</p>
                         </TempoInfo>
                     </Tempo>
                     <Resultado>
@@ -257,6 +259,7 @@ function Test() {
                                 <p>{informacoesCidades[opcaoSelecionada].resultadoDescricao}</p>
                             </ResultadoTxt>
                         </ResultadoInfo>
+                        <p>*Interface apenas para fins ilustrativos, não refletindo resultados reais.</p>
                     </Resultado>
                 </ClimaContent>
             </ClimaContainer>
