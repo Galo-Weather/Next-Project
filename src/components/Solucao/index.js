@@ -141,6 +141,7 @@ p{
 const ClimaContainer = styled.div`
     background: linear-gradient(#e8e8e8, #ffffff 15%);
     padding: 1em;
+    padding-bottom: 5em;
 `
 const ClimaContent = styled.section`
  @media (min-width: 1100px){
