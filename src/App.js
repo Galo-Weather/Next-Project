@@ -3,12 +3,13 @@ import Footer from './components/Footer';
 import MainPage from './components/MainPage';
 import Error from './components/Error';
 import Login from './components/Login';
-import Solucao from './components/Solucao';
+import Solucao from './components/Test';
 import SignUp from './components/SignUp';
 import Contato from './components/Contato';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Routes, Route } from 'react-router-dom';
 import GlobalStyles from './styles/GlobalStyles';
+import Test from './components/Test';
 
 function App() {
   var listaUser = JSON.parse(localStorage.getItem("usersList"))
@@ -40,6 +41,7 @@ function App() {
         <Route path='/Sign-in' element={<Login />} />
         <Route path='/Sign-up' element={<SignUp />} />
         <Route path='/Contato' element={<Contato />} />
+        <Route path='/TestProject' element={<Test />} />
       </Routes>
       <Footer />
     </div>

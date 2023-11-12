@@ -131,7 +131,7 @@ h1{
  }
 `
 
-function Solucao() {
+function Test() {
 
     const [opcaoSelecionada, setOpcaoSelecionada] = useState('op1');
 
@@ -264,4 +264,4 @@ function Solucao() {
     );
 }
 
-export default Solucao
+export default Test

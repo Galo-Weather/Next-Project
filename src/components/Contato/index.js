@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from 'react';
+import { Element } from "react-scroll";
 import Galoicon from '../../imgs/galoIcon.png'
 import Fabricio from '../../imgs/time/Fabricio.png'
 import GuilhermeA from '../../imgs/time/Guilherme A.png'
@@ -266,7 +267,7 @@ function Contato() {
 
     return (
         <>
-            <>
+            <Element name='Sobre'>
                 <AboutContainer>
                     <h1>Sobre nós</h1>
                     <Container>
@@ -352,8 +353,8 @@ function Contato() {
 
                 </CardContainer>
 
-            </>
-            <>
+            </Element>
+            <Element name='Contato'>
                 <ContatoContainer>
                     <InnerContatoContainer>
                         <ContatoContainerHeader>
@@ -392,7 +393,7 @@ function Contato() {
                         </CardsContainer>
                     </InnerContatoContainer>
                 </ContatoContainer>
-            </>
+            </Element>
         </>
     );
 }

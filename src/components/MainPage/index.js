@@ -82,13 +82,24 @@ const HomeTxt2 = styled.div`
 
 `
 const HomeVideo = styled.div`
-padding: 2em;
 text-align: center;
+padding: 2em;
 iframe{
-    width: 1120px;
+    max-width: 100%;
     height: 630px;
     border-radius: 20px;
     box-shadow: 0 1em 1em rgba(214, 214, 214, 0.8);
+}
+
+@media (min-width: 1100px) {
+    padding: 2em;
+    text-align: center;
+    iframe{
+        width: 1120px;
+        height: 630px;
+        border-radius: 20px;
+        box-shadow: 0 1em 1em rgba(214, 214, 214, 0.8);
+    }
 }
 `
 const ProblemaContainer = styled.section`
@@ -364,8 +375,36 @@ p{
     grid-column-end: 3;
 }
 `
+const TestProject = styled.div`
+background: linear-gradient(#e8e8e8, #ffffff 15%);
+text-align: center;
+padding: 2em 0;
+
+button {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f62fe;
+    border: none;
+    border-radius: 2em;
+    box-shadow: 0px 1px 8px #ffffff;
+    cursor: pointer;
+    color: white;
+    padding: 1em;
+    margin: 1em auto;
+    height: 42.3px;
+    transition: 0.25s;
+  }
+  button:hover {
+    box-shadow: 0px 1px 18px #afafaf;
+  }
+`
 
 function MainPage() {
+    const sendTestClick = () => {
+        window.location.href = '/TestProject';
+    };
     return (
         <>
             <Element name="Home" id="Home">
@@ -558,8 +597,13 @@ function MainPage() {
                             permitem antecipar enchentes e melhorar a segurança de áreas propensas a alagamentos.</p>
                     </SolucaoContent2>
                 </SolucaoContainer>
-                VENHA CONHECER NOSSO PROJETO!
             </Element>
+            <>
+                <TestProject>
+                    <h1>Quer entender como funciona?</h1>
+                    <button onClick={sendTestClick}>Faça o teste</button>
+                </TestProject>
+            </>
         </>
     );
 }

@@ -192,8 +192,8 @@ function Header() {
                         <li onClick={() => handleNavLinkClick("Problema")}><RouterLink to="/">Problema</RouterLink></li>
                         <li onClick={() => handleNavLinkClick("Causa")}><RouterLink to="/">Causas</RouterLink></li>
                         <li onClick={() => handleNavLinkClick("Solucao")}><RouterLink to="/">Solução</RouterLink></li>
-                        <li><RouterLink to="/Soluçao">Sobre Nós</RouterLink></li>
-                        <li><RouterLink to="/Contato">Contato</RouterLink></li>
+                        <li onClick={() => handleNavLinkClick("Sobre")}><RouterLink to="/Contato">Sobre Nós</RouterLink></li>
+                        <li onClick={() => handleNavLinkClick("Contato")}><RouterLink to="/Contato">Contato</RouterLink></li>
                     </NavHeader>
                 </Nav>
                 <LoginHeader>
