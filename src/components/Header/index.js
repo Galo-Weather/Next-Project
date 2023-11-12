@@ -2,8 +2,9 @@ import styled from "styled-components";
 import React from 'react';
 import hamburguer from '../../imgs/burguer.png'
 import logo from '../../imgs/galoBanner.png'
-import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { useState,  } from "react";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
+import * as Scroll from 'react-scroll';
 
 const Head = styled.header`
     font-family: "Montserrat", sans-serif;
@@ -122,6 +123,28 @@ a:hover {
 `
 
 function Header() {
+    const { scroller } = Scroll;
+    const navigate = useNavigate();
+
+    const scrollToAnchor = (elementName) => {
+        setTimeout(() => {
+            scroller.scrollTo(elementName, {
+                duration: 0,
+                delay: 0,
+                smooth: true,
+                offset: -100 // Adjust offset as needed
+            });
+        }, 200); // You can adjust the delay value if needed
+    };
+
+    const handleNavLinkClick = (elementName, route) => {
+        scrollToAnchor(elementName);
+        if (route) {
+            navigate(route);
+        }
+    };
+
+    
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -146,17 +169,17 @@ function Header() {
                 </LogoHeader>
                 <Nav>
                     <NavHeader>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/">Problema</Link></li>
-                        <li><Link to="/">Causas</Link></li>
-                        <li><Link to="/Soluçao">Solução</Link></li>
-                        <li><Link to="/Soluçao">Sobre Nós</Link></li>
-                        <li><Link to="/Contato">Contato</Link></li>
+                        <li onClick={() => handleNavLinkClick("Home")}><RouterLink to="/">Home</RouterLink></li>
+                        <li onClick={() => handleNavLinkClick("Problema")}><RouterLink to="/">Problema</RouterLink></li>
+                        <li onClick={() => handleNavLinkClick("Causa")}><RouterLink to="/">Causas</RouterLink></li>
+                        <li><RouterLink to="/Soluçao">Solução</RouterLink></li>
+                        <li><RouterLink to="/Soluçao">Sobre Nós</RouterLink></li>
+                        <li><RouterLink to="/Contato">Contato</RouterLink></li>
                     </NavHeader>
                 </Nav>
                 <LoginHeader>
                     <ul>
-                        <LoginAnchor><Link to="/Sign-in">Login</Link></LoginAnchor>
+                        <LoginAnchor><RouterLink to="/Sign-in">Login</RouterLink></LoginAnchor>
                     </ul>
                 </LoginHeader>
             </Head>

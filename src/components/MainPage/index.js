@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from 'react';
+import { Element } from 'react-scroll';
 import mainGif from '../../imgs/capaGif.gif';
 import problemaImagem from '../../imgs/problemaImagem.jpg';
 import Urbanização from '../../imgs/Urbanizacao.png';
@@ -224,7 +225,7 @@ const Face2Content = styled.div`
 function MainPage() {
     return (
         <>
-            <>
+            <Element name="Home" id="Home">
                 <Home>
                     <HomeContainer>
                         <HomeTxt1>
@@ -238,15 +239,15 @@ function MainPage() {
                         </HomeImg>
                         <HomeTxt2>
                             <p>O Desafio da IBM:</p>
-                            <p>A IBM está dedicada a tornar as cidades mais sustentáveis, buscando soluções inovadoras que equilibrem o 
-                                desenvolvimento econômico, social e ambiental dos ambientes urbanos. Em nosso projeto, buscamos enfrentar o 
-                                grave problema dos alagamentos urbanos. Nosso compromisso é contribuir com soluções eficazes para mitigar esses impactos, 
+                            <p>A IBM está dedicada a tornar as cidades mais sustentáveis, buscando soluções inovadoras que equilibrem o
+                                desenvolvimento econômico, social e ambiental dos ambientes urbanos. Em nosso projeto, buscamos enfrentar o
+                                grave problema dos alagamentos urbanos. Nosso compromisso é contribuir com soluções eficazes para mitigar esses impactos,
                                 visando um ambiente mais seguro e habitável para todos, alinhado com os Objetivos de Desenvolvimento Sustentável da ONU.</p>
                         </HomeTxt2>
                     </HomeContainer>
                 </Home>
-            </>
-            <>
+            </Element>
+            <Element name="Problema" id="Problema">
                 <ProblemaContainer>
                     <Container>
                         <ProblemaImg>
@@ -268,8 +269,8 @@ function MainPage() {
                         </ProblemaTxT>
                     </Container>
                 </ProblemaContainer>
-            </>
-            <>
+            </Element>
+            <Element name="Causa" id="Causa">
                 <CausaContainer>
                     <h1>Principais causas</h1>
                     <CausaContent>
@@ -285,8 +286,8 @@ function MainPage() {
                             <Face2>
                                 <Face2Content>
                                     <p>O clima tropical em que está situada São Paulo sofre com frequência de chuvas intensas,
-                                    que podem resultar em deslizamentos e inundações, principalmente em regiões com drenagem
-                                    inadequada.
+                                        que podem resultar em deslizamentos e inundações, principalmente em regiões com drenagem
+                                        inadequada.
                                     </p>
                                 </Face2Content>
                             </Face2>
@@ -303,8 +304,8 @@ function MainPage() {
                             <Face2>
                                 <Face2Content>
                                     <p>Sistemas de drenagem insuficientes em São Paulo também podem causar inundações, pois a
-                                    água da chuva pode se acumular em regiões baixas e ruas sem saídas ou canais adequados
-                                    para direcionar a água adequadamente.
+                                        água da chuva pode se acumular em regiões baixas e ruas sem saídas ou canais adequados
+                                        para direcionar a água adequadamente.
                                     </p>
                                 </Face2Content>
                             </Face2>
@@ -321,69 +322,15 @@ function MainPage() {
                             <Face2>
                                 <Face2Content>
                                     <p>Prédios, estradas e outras infraestruturas foram construídas sobre solo natural nos
-                                    distritos metropolitanos como resultado da rápida urbanização das cidades,
-                                    que diminuiu a capacidade do solo de absorver água e aumentou o escoamento.
+                                        distritos metropolitanos como resultado da rápida urbanização das cidades,
+                                        que diminuiu a capacidade do solo de absorver água e aumentou o escoamento.
                                     </p>
                                 </Face2Content>
                             </Face2>
                         </Card>
-                        {/* <Card>
-                            <Face1>
-                                <Face1Content>
-                                    <img
-                                        src={Ultrassonic}
-                                        alt="Esp32"></img>
-                                    <h3>Hardware</h3>
-                                </Face1Content>
-                            </Face1>
-                            <Face2>
-                                <Face2Content>
-                                    <p>O Galo Weather utiliza um sensor
-                                        ultrassônico para detectar obstruções em bueiros
-                                        e gerar notificações na rede.
-                                    </p>
-                                </Face2Content>
-                            </Face2>
-                        </Card>
-                        <Card>
-                            <Face1>
-                                <Face1Content>
-                                    <img
-                                        src={Ultrassonic}
-                                        alt="Esp32"></img>
-                                    <h3>Hardware</h3>
-                                </Face1Content>
-                            </Face1>
-                            <Face2>
-                                <Face2Content>
-                                    <p>O Galo Weather utiliza um sensor
-                                        ultrassônico para detectar obstruções em bueiros
-                                        e gerar notificações na rede.
-                                    </p>
-                                </Face2Content>
-                            </Face2>
-                        </Card>
-                        <Card>
-                            <Face1>
-                                <Face1Content>
-                                    <img
-                                        src={Ultrassonic}
-                                        alt="Esp32"></img>
-                                    <h3>Hardware</h3>
-                                </Face1Content>
-                            </Face1>
-                            <Face2>
-                                <Face2Content>
-                                    <p>O Galo Weather utiliza um sensor
-                                        ultrassônico para detectar obstruções em bueiros
-                                        e gerar notificações na rede.
-                                    </p>
-                                </Face2Content>
-                            </Face2>
-                        </Card> */}
                     </CausaContent>
                 </CausaContainer>
-            </>
+            </Element>
         </>
     );
 }

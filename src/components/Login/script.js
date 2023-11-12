@@ -12,14 +12,19 @@ export default function Auth(evt) {
             return usuario.emailUser === email && usuario.senhaUser === password;
         });
         if (acharUsuario) {
-            localStorage.setItem("userLog", "1");//define se o usuario foi logado
+            localStorage.setItem("userLog", "1");   //define se o usuario foi logado
             let logUser = [acharUsuario]; //define qual usuario foi logado
             localStorage.setItem("logedUser", JSON.stringify(logUser))
-            window.location.href = "/";
+            msgError.innerHTML = 'Usuario Validado!'
             console.log("Usuario Validado!")
+            //tempo para redirecionar
+            setTimeout(function () {
+                window.location.href = "/";
+            }, 2000);
         } else {
-            msgError.innerHTML = 'Email ou senha incorretos'
+            msgError.innerHTML = 'Usuario Invalido digite novamente'
             console.log("Usuario Invalido digite novamente")
+            return;
         }
     }
 }

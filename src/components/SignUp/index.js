@@ -129,6 +129,12 @@ const RedirectHome = styled.div`
 
 
 function SignUp() {
+  //Verifica se o usuario esta logado
+  const userLog = localStorage.getItem("userLog");
+  if (userLog === "1") {
+    window.location.href = "/";
+  }
+  
   return (
     <SignUpPage>
       <Container>
