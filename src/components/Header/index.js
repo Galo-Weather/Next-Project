@@ -152,9 +152,9 @@ function Header() {
                 duration: 0,
                 delay: 0,
                 smooth: true,
-                offset: -100 // Adjust offset as needed
+                offset: -100
             });
-        }, 200); // You can adjust the delay value if needed
+        }, 200);
     };
 
     const handleNavLinkClick = (elementName, route) => {

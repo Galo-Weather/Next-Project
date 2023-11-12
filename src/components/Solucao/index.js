@@ -1,16 +1,13 @@
 import styled from "styled-components";
 import React from 'react';
 import { useState } from 'react';
-//Imagens Extra
 import Umidade from '../../imgs/icons/humidade.png'
 import Velocidade from '../../imgs/icons/vento.png'
-//Imagens tempo
 import Rain from '../../imgs/icons/rain.png'
 import Sun from '../../imgs/icons/clear.png'
 import Cloud from '../../imgs/icons/cloud.png'
 import Mist from '../../imgs/icons/mist.png'
 import Snow from '../../imgs/icons/snow.png'
-//Imagens resultado
 import FloodHouse from '../../imgs/icons/casa-inundada.png'
 
 const ClimaPage = styled.div`
@@ -136,7 +133,7 @@ h1{
 
 function Solucao() {
 
-    const [opcaoSelecionada, setOpcaoSelecionada] = useState('op1'); // Defina a opção inicial
+    const [opcaoSelecionada, setOpcaoSelecionada] = useState('op1');
 
     const handleSelectChange = (e) => {
         const novaOpcao = e.target.value;

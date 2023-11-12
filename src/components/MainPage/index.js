@@ -547,7 +547,6 @@ function MainPage() {
                                 </Face2ContentS>
                             </Face2S>
                         </CardS>
-
                     </SolucaoContent>
                     <SolucaoContent2>
                         <img
