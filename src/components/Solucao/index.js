@@ -1,10 +1,21 @@
 import styled from "styled-components";
 import React from 'react';
-import Rain from '../../imgs/icons/rain.png'
+import { useState } from 'react';
+//Imagens Extra
 import Umidade from '../../imgs/icons/humidade.png'
 import Velocidade from '../../imgs/icons/vento.png'
+//Imagens tempo
+import Rain from '../../imgs/icons/rain.png'
+import Sun from '../../imgs/icons/clear.png'
+import Cloud from '../../imgs/icons/cloud.png'
+import Mist from '../../imgs/icons/mist.png'
+import Snow from '../../imgs/icons/snow.png'
+//Immagens resultado
 import FloodHouse from '../../imgs/icons/casa-inundada.png'
 
+const ClimaPage = styled.div`
+    min-height: 93vh;
+`
 const ClimaContainer = styled.div`
     background: linear-gradient(#e8e8e8, #ffffff 15%);
     padding: 1em;
@@ -12,6 +23,7 @@ const ClimaContainer = styled.div`
 `
 const ClimaContent = styled.section`
  @media (min-width: 1100px){
+    margin-top: 7em;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -23,8 +35,7 @@ const Tempo = styled.div`
     border-radius: 2em;
     text-align: center;
     @media (min-width: 1100px){
-        width: 22em;
-        height: 35em;
+        width: 26%;
     }
 `
 const TempoTitle = styled.section`
@@ -124,8 +135,74 @@ h1{
 `
 
 function Solucao() {
+
+    const [opcaoSelecionada, setOpcaoSelecionada] = useState('op1'); // Defina a opção inicial
+
+    const handleSelectChange = (e) => {
+        const novaOpcao = e.target.value;
+        setOpcaoSelecionada(novaOpcao);
+    };
+
+    const informacoesCidades = {
+        op1: {
+            nome: 'Itaim Bibi',
+            imagemClima: Rain,
+            imagemResultado: FloodHouse,
+            temperatura: '20 °C',
+            temperaturaDescricao: 'Chuvoso',
+            umidade: '74%',
+            velocidade: '88%',
+            resultado: 'Previsão de chuva intensa',
+            resultadoDescricao: 'A chuva que se aproxima ira alagar a area',
+        },
+        op2: {
+            nome: 'Mocca',
+            imagemClima: Sun,
+            imagemResultado: FloodHouse,
+            temperatura: '24 °C',
+            temperaturaDescricao: 'Ensolarado',
+            umidade: '35%',
+            velocidade: '18',
+            resultado: 'Previsão de chuva intensa',
+            resultadoDescricao: 'A chuva que se aproxima ira alagar a area',
+        },
+        op3: {
+            nome: 'Vila Prudente',
+            imagemClima: Cloud,
+            imagemResultado: FloodHouse,
+            temperatura: '20 °C',
+            temperaturaDescricao: 'Chuvoso',
+            umidade: '74%',
+            velocidade: '88%',
+            resultado: 'Previsão de chuva intensa',
+            resultadoDescricao: 'A chuva que se aproxima ira alagar a area',
+        },
+        op4: {
+            nome: 'Tatuapé',
+            imagemClima: Mist,
+            imagemResultado: FloodHouse,
+            temperatura: '20 °C',
+            temperaturaDescricao: 'Chuvoso',
+            umidade: '74%',
+            velocidade: '88%',
+            resultado: 'Previsão de chuva intensa',
+            resultadoDescricao: 'A chuva que se aproxima ira alagar a area',
+        },
+        op5: {
+            nome: 'Belenzinho',
+            imagemClima: Snow,
+            imagemResultado: FloodHouse,
+            temperatura: '20 °C',
+            temperaturaDescricao: 'Chuvoso',
+            umidade: '74%',
+            velocidade: '88%',
+            resultado: 'Previsão de chuva intensa',
+            resultadoDescricao: 'A chuva que se aproxima ira alagar a area',
+        },
+    };
+
     return (
-        <>
+        <ClimaPage>
             <ClimaContainer>
                 <ClimaContent>
                     <Tempo>
@@ -133,7 +210,11 @@ function Solucao() {
                             <h1>Escolha sua região</h1>
                         </TempoTitle>
                         <TempoSelect>
-                            <select id="cidades1" class="cidades" name="cidades1">
+                            <select id="cidades1"
+                                class="cidades"
+                                name="cidades1"
+                                value={opcaoSelecionada}
+                                onChange={handleSelectChange}>
                                 <option value="op1">Itaim Bibi</option>
                                 <option value="op2">Mocca</option>
                                 <option value="op3">Vila Prudente</option>
@@ -143,47 +224,47 @@ function Solucao() {
                         </TempoSelect>
                         <TempoImg
                             id="imgSim1"
-                            src={Rain}
+                            src={informacoesCidades[opcaoSelecionada].imagemClima}
                             alt="Clima-img"></TempoImg>
                         <TempoInfo>
                             <TempTxt>
-                                <p>20 °C</p>
-                                <p>Chuvoso</p>
+                                <p>{informacoesCidades[opcaoSelecionada].temperatura}</p>
+                                <p>{informacoesCidades[opcaoSelecionada].temperaturaDescricao}</p>
                             </TempTxt>
                             <TempInfo>
                                 <div>
                                     <img
                                         src={Umidade}
                                         alt="Umidade imagem"></img>
-                                    <p>Umidade <br /> 74%</p>
+                                    <p>Umidade <br /> {informacoesCidades[opcaoSelecionada].umidade}</p>
                                 </div>
                                 <div>
                                     <img
                                         src={Velocidade}
                                         alt="Velocidade imagem"></img>
-                                    <p>Velocidade <br /> 88%</p>
+                                    <p>Velocidade <br /> {informacoesCidades[opcaoSelecionada].velocidade}</p>
                                 </div>
                             </TempInfo>
                         </TempoInfo>
                     </Tempo>
                     <Resultado>
                         <ResultadoTitle>
-                            <h1> Itaim Bibi</h1>
+                            <h1>{informacoesCidades[opcaoSelecionada].nome}</h1>
                         </ResultadoTitle>
                         <ResultadoImg
                             id="imgSim1"
-                            src={FloodHouse}
+                            src={informacoesCidades[opcaoSelecionada].imagemResultado}
                             alt="Clima-img"></ResultadoImg>
                         <ResultadoInfo>
                             <ResultadoTxt>
-                                <h1>Previsão de chuva intensa</h1>
-                                <p>A chuva que se aproxima ira alagar a area</p>
+                                <h1>{informacoesCidades[opcaoSelecionada].resultado}</h1>
+                                <p>{informacoesCidades[opcaoSelecionada].resultadoDescricao}</p>
                             </ResultadoTxt>
                         </ResultadoInfo>
                     </Resultado>
                 </ClimaContent>
             </ClimaContainer>
-        </>
+        </ClimaPage>
     );
 }
 

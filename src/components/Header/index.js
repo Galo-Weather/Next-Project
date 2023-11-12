@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from 'react';
 import hamburguer from '../../imgs/burguer.png'
 import logo from '../../imgs/galoBanner.png'
-import { useState,  } from "react";
+import { useState, useEffect } from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import * as Scroll from 'react-scroll';
 
@@ -123,6 +123,26 @@ a:hover {
 `
 
 function Header() {
+    const [loginText, setLoginText] = useState("Login");
+
+    useEffect(() => {
+        const userLog = localStorage.getItem("userLog");
+        if (userLog === "1") {
+            setLoginText("Logout");
+        } else {
+            setLoginText("Login");
+        }
+    }, []);
+
+    const handleLoginClick = () => {
+        const userLog = localStorage.getItem("userLog");
+
+        if (userLog === "1") {
+            localStorage.setItem("userLog", JSON.stringify("0"));
+            setLoginText("Login");
+        }
+    };
+
     const { scroller } = Scroll;
     const navigate = useNavigate();
 
@@ -144,7 +164,7 @@ function Header() {
         }
     };
 
-    
+
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -179,7 +199,7 @@ function Header() {
                 </Nav>
                 <LoginHeader>
                     <ul>
-                        <LoginAnchor><RouterLink to="/Sign-in">Login</RouterLink></LoginAnchor>
+                        <LoginAnchor><RouterLink to="/Sign-in" onClick={handleLoginClick}>{loginText}</RouterLink></LoginAnchor>
                     </ul>
                 </LoginHeader>
             </Head>
