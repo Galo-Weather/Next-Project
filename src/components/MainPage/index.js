@@ -222,6 +222,16 @@ const Face2Content = styled.div`
     justify-content: center;
 }
 `
+const HomeVideo = styled.div`
+padding: 2em;
+text-align: center;
+iframe{
+    width: 1120px;
+    height: 630px;
+    border-radius: 20px;
+    box-shadow: 0 1em 1em rgba(214, 214, 214, 0.8);
+}
+`
 function MainPage() {
     return (
         <>
@@ -245,6 +255,9 @@ function MainPage() {
                                 visando um ambiente mais seguro e habitável para todos, alinhado com os Objetivos de Desenvolvimento Sustentável da ONU.</p>
                         </HomeTxt2>
                     </HomeContainer>
+                    <HomeVideo>
+                        <iframe src="https://www.youtube.com/embed/-rAZMxnWMe8?si=2cM0xixoIEo928tk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </HomeVideo>
                 </Home>
             </Element>
             <Element name="Problema" id="Problema">
