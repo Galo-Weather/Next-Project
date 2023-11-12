@@ -69,7 +69,7 @@ const HomeTxt2 = styled.div`
       }
     p {
         margin-bottom: 0.5em;
-        font-size: 1.2em;
+        font-size: 1.4em;
       }
       @media (min-width: 1100px) {
         display: flex;
@@ -147,7 +147,7 @@ const ProblemaTxT = styled.div`
 
       p {
         margin-bottom: 0.5em;
-        font-size: 1.5em;
+        font-size: 1.4em;
         line-height: 1.5;
       }
 
@@ -350,6 +350,7 @@ const Face2ContentS = styled.div`
  @media (min-width: 1100px) {
     display: flex;
     align-items: center;
+    font-weight: normal;
     padding: 0;
     justify-content: center;
 }
@@ -376,10 +377,12 @@ p{
 }
 `
 const TestProject = styled.div`
-background: linear-gradient(#e8e8e8, #ffffff 15%);
 text-align: center;
 padding: 2em 0;
 
+h2{
+    color: #00000;
+}
 button {
     font-size: 2em;
     display: flex;
@@ -595,14 +598,14 @@ function MainPage() {
                         <p>O "Galo Weather" é um projeto inovador para combater alagamentos urbanos usando tecnlogia.
                             Nele, a união de um software de análise e manipulação de dados e um hardware de monitoramento
                             permitem antecipar enchentes e melhorar a segurança de áreas propensas a alagamentos.</p>
+                        <TestProject>
+                            <h2>Quer entender como funciona?</h2>
+                            <button onClick={sendTestClick}>Faça o teste</button>
+                        </TestProject>
                     </SolucaoContent2>
                 </SolucaoContainer>
             </Element>
             <>
-                <TestProject>
-                    <h1>Quer entender como funciona?</h1>
-                    <button onClick={sendTestClick}>Faça o teste</button>
-                </TestProject>
             </>
         </>
     );

@@ -15,7 +15,10 @@ background: linear-gradient(#e8e8e8, #ffffff 15%);
   text-align: center;
   padding: 1em;
   h1{
-    margin-bottom: 1em;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 1em 0;
+    color: #0f62fe;
   }
 
   @media (min-width: 1100px) {
@@ -58,6 +61,7 @@ img{
 const AboutTxT = styled.div`
   max-width: 600px;
   padding-top: 1em;
+  font-weight: 400;
 `;
 
 const CardContainer = styled.div`
@@ -167,7 +171,7 @@ const SobreCardImgContainer = styled.figure`
 
     padding: 1em;
     img{
-        max-width: 70%;
+        max-width: 50%;
     }
 
 @media (min-width: 1100px) {
@@ -186,6 +190,7 @@ const CardTextContainer = styled.div`
 text-align: center;
 color: #000000;
 font-size: 1em;
+padding: 1em;
 p:first-child {
     font-size: 1.5em;
     font-weight: 800;
@@ -206,7 +211,6 @@ button {
     font-size: 1em;
     font-weight: 700;
     border-radius: 2em;
-    margin-top: 30px
 }
 button:hover {
     background: #0f62fe;
@@ -239,7 +243,6 @@ button:hover {
         font-size: 1em;
         font-weight: 700;
         border-radius: 2em;
-        margin-top: 30px
     }
     button:hover {
         background: #0f62fe;
