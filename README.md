@@ -42,22 +42,16 @@ As imagens utilizadas ao longo de todo o site se encontram na [pasta "imgs"](./s
 
 ___
 ## Como executar o projeto
-Para executar o projeto, é necessário copiar o repositório em uma máquina local (através de um _IDE_, por exemplo), e ter instalado o ambiente de desenvolvimento [Node](https://nodejs.org/en).
+O site pode ser acessado por uma versão hospedada do site através [deste link](https://challenge-2023-d826e.web.app/Soluçao).
+
+Ou alternativamente, para executar o projeto, é necessário copiar o repositório em uma máquina local (através de um _IDE_, por exemplo), e ter instalado o ambiente de desenvolvimento [Node](https://nodejs.org/en).
 
 Uma vez que os arquivos estão presentes na máquina, é necessário utilizar o comando "npm install" através de um terminal de comando na pasta principal, para que a biblioteca styled-components também seja adicionada aos arquivos*
 
 Por fim, é necessário somente utilizar o comando "npm start" para que a página seja exibida.
-
-Alternativamente, você pode acessar a versão hospedada do site através [deste link](https://challenge-2023-d826e.web.app/Soluçao).
 
 *atenção para mudar o diretório utilizado para a pasta principal dos arquivos
 
 
 
 _____
-# Projeto next
-
-npm install para receber todos os frameworks usados, sendo eles:
-- styled components
-- bootstrap
-- router dom
